@@ -1,0 +1,30 @@
+{
+    "user_id_list": [
+        "3261134763"
+    ],
+    "filter": 0,
+    "remove_html_tag": 1,
+    "since_date": 1,
+    "start_page": 1,
+    "write_mode": [
+        "mysql"
+    ],
+    "original_pic_download": 0,
+    "retweet_pic_download": 0,
+    "original_video_download": 0,
+    "retweet_video_download": 0,
+    "download_comment": 0,
+    "comment_max_download_count": 100,
+    "download_repost": 0,
+    "repost_max_download_count": 100,
+    "result_dir_name": 1,
+    "cookie": "",
+    "mysql_config": {
+        "host": "127.0.0.1",
+        "port": 3306,
+        "db": "weibo2ethtweet",
+        "user": "root",
+        "password": "root",
+        "charset": "utf8mb4"
+    }
+}
