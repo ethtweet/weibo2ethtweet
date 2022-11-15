@@ -113,7 +113,7 @@ class Weibo(object):
         self.got_count = 0  # 存储爬取到的微博数
         self.weibo = []  # 存储爬取到的所有微博信息
         self.weibo_id_list = []  # 存储爬取到的所有微博id
-        logger.info("self.weibo_id_list",len(self.weibo_id_list))
+        logger.info("self.weibo_id_list %d",len(self.weibo_id_list))
 
     def validate_config(self, config):
         """验证配置是否正确"""
@@ -1467,7 +1467,7 @@ class Weibo(object):
                 bid varchar(12) NOT NULL,
                 user_id varchar(20),
                 screen_name varchar(30),
-                text varchar(2000),
+                text longtext,
                 article_url varchar(100),
                 topics varchar(200),
                 at_users varchar(1000),

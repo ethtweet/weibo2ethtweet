@@ -10,7 +10,7 @@ type Weibo struct {
 	Bid            string    `gorm:"column:bid;type:varchar(12);not null" json:"bid"`
 	UserID         string    `gorm:"column:user_id;type:varchar(20);default:null" json:"user_id"`
 	ScreenName     string    `gorm:"column:screen_name;type:varchar(30);default:null" json:"screen_name"`
-	Text           string    `gorm:"column:text;type:varchar(2000);default:null" json:"text"`
+	Text           string    `gorm:"column:text;type:longtext;default:null" json:"text"`
 	ArticleURL     string    `gorm:"column:article_url;type:varchar(100);default:null" json:"article_url"`
 	Topics         string    `gorm:"column:topics;type:varchar(200);default:null" json:"topics"`
 	AtUsers        string    `gorm:"column:at_users;type:varchar(1000);default:null" json:"at_users"`
