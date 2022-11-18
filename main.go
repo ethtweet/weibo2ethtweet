@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/url"
@@ -119,6 +120,7 @@ func sendTweet(tweet model.Weibo) {
 	params.Set("content", tweet.Text)
 	params.Set("attachment", attachment)
 	params.Set("key", tweet.UserID)
+	params.Set("created_at", fmt.Sprintf("%d", tweet.CreatedAt.Unix()))
 
 	_, body, _ := gorequest.New().Post("http://127.0.0.1:8080/api/v0/tweet/release").
 		Type("multipart").
@@ -127,6 +129,7 @@ func sendTweet(tweet model.Weibo) {
 
 	if gjson.Get(body, "code").Int() != 0 {
 		log.Println(tweet.ID + "发送失败")
+		log.Println(body)
 	} else {
 		utils.Db.Get().Model(&tweet).Select("TweetID").Updates(model.Weibo{TweetID: gjson.Get(body, "data.Id").String()})
 		log.Println(strings.Repeat("=", 50), tweet.ID+" 发送成功")
