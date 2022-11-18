@@ -2,14 +2,15 @@ package utils
 
 import (
 	"fmt"
+	"log"
+	"os"
+	"time"
+	"weibo2ethtweet/model"
+
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"log"
-	"os"
-	"time"
-	"weibo2ipfs/model"
 )
 
 var Db = &dbUtils{
