@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/url"
@@ -43,7 +42,7 @@ func main() {
 
 			var items []model.Weibo
 			if utils.Db.Get().Where("tweet_id = '' AND user_id = ?", user.ID).
-				Order("created_at desc").Limit(10).Find(&items).RowsAffected < 1 {
+				Order("created_at desc").Limit(100).Find(&items).RowsAffected < 1 {
 				continue
 			}
 
@@ -120,8 +119,7 @@ func sendTweet(tweet model.Weibo) {
 	params.Set("content", tweet.Text)
 	params.Set("attachment", attachment)
 	params.Set("key", tweet.UserID)
-	params.Set("created_at", fmt.Sprintf("%d", tweet.CreatedAt.Unix()))
-
+	params.Set("createdAt", strconv.FormatInt(tweet.CreatedAt.Unix(), 10))
 	_, body, _ := gorequest.New().Post("http://127.0.0.1:8080/api/v0/tweet/release").
 		Type("multipart").
 		Send(params).
