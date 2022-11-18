@@ -123,10 +123,10 @@ func updateProfile(user model.User) {
 		End()
 
 	if gjson.Get(body, "code").Int() != 0 {
-		log.Println("更新识别")
+		log.Println("更新资料失败")
 		log.Println(body)
 	} else {
-		log.Println(user.ScreenName + "资料更新成功" + body)
+		log.Println(user.ScreenName + "资料更新成功")
 	}
 }
 
@@ -147,11 +147,11 @@ func sendTweet(tweet model.Weibo) {
 		End()
 
 	if gjson.Get(body, "code").Int() != 0 {
-		log.Println(tweet.ID + "发送失败")
+		log.Println(tweet.ID + tweet.Text + "发送失败")
 		log.Println(body)
 	} else {
 		utils.Db.Get().Model(&tweet).Select("TweetID").Updates(model.Weibo{TweetID: gjson.Get(body, "data.Id").String()})
-		log.Println(strings.Repeat("=", 50), tweet.ID+" 发送成功")
+		log.Println(strings.Repeat("=", 50), tweet.ID+tweet.Text+" 发送成功")
 	}
 
 	//wg.Done()
