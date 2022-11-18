@@ -40,9 +40,10 @@ func main() {
 		for _, user := range users {
 			id = user.ID
 
+			updateProfile(user)
 			var items []model.Weibo
 			if utils.Db.Get().Where("tweet_id = '' AND user_id = ?", user.ID).
-				Order("created_at desc").Limit(100).Find(&items).RowsAffected < 1 {
+				Order("created_at asc").Limit(10).Find(&items).RowsAffected < 1 {
 				continue
 			}
 
@@ -107,6 +108,26 @@ func tweetFiles(tweet model.Weibo) []string {
 	}
 
 	return list
+}
+
+func updateProfile(user model.User) {
+	params := url.Values{}
+	params.Set("name", user.ScreenName)
+	params.Set("desc", user.Description)
+	params.Set("avatar", user.AvatarHd)
+	params.Set("key", user.ID)
+
+	_, body, _ := gorequest.New().Post("http://127.0.0.1:8080/api/v0/user/profile").
+		Type("multipart").
+		Send(params).
+		End()
+
+	if gjson.Get(body, "code").Int() != 0 {
+		log.Println("更新识别")
+		log.Println(body)
+	} else {
+		log.Println(user.ScreenName + "资料更新成功" + body)
+	}
 }
 
 func sendTweet(tweet model.Weibo) {
