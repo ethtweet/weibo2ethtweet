@@ -14,7 +14,6 @@ require (
 	github.com/gookit/color v1.5.2 // indirect
 	github.com/ipfs/go-ipfs-api v0.2.0
 	github.com/jroimartin/gocui v0.5.0 // indirect
-	github.com/klauspost/cpuid/v2 v2.0.6 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/libp2p/go-libp2p-core v0.8.5 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect
@@ -26,7 +25,7 @@ require (
 	github.com/shopspring/decimal v1.3.1
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/spf13/cobra v1.6.1 // indirect
-	github.com/spf13/viper v1.14.0
+	github.com/spf13/viper v1.18.2
 	github.com/tidwall/gjson v1.7.5
 	github.com/whyrusleeping/tar-utils v0.0.0-20201201191210-20a61371de5b // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
@@ -34,7 +33,6 @@ require (
 	github.com/xxjwxc/public v0.0.0-20221113163005-2bd0baa5415d // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
-	golang.org/x/crypto v0.2.0 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/driver/sqlite v1.4.3 // indirect
