@@ -27,7 +27,7 @@ require (
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/spf13/cobra v1.6.1 // indirect
 	github.com/spf13/viper v1.14.0
-	github.com/tidwall/gjson v1.7.5
+	github.com/tidwall/gjson v1.17.1
 	github.com/whyrusleeping/tar-utils v0.0.0-20201201191210-20a61371de5b // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/xxjwxc/gormt v0.0.0-20220706104133-3dea08f1e40f // indirect
