@@ -34,11 +34,10 @@ require (
 	github.com/xxjwxc/public v0.0.0-20221113163005-2bd0baa5415d // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
-	golang.org/x/crypto v0.2.0 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
-	gorm.io/driver/mysql v1.5.1
+	gorm.io/driver/mysql v1.6.0
 	gorm.io/driver/sqlite v1.4.3 // indirect
 	gorm.io/driver/sqlserver v1.4.1 // indirect
-	gorm.io/gorm v1.25.1
+	gorm.io/gorm v1.30.0
 	moul.io/http2curl v1.0.0 // indirect
 )
