@@ -10,7 +10,7 @@ require (
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/gobuffalo/envy v1.10.2 // indirect
 	github.com/gobuffalo/packd v1.0.2 // indirect
-	github.com/golang-module/carbon v1.7.2
+	github.com/golang-module/carbon v1.7.3
 	github.com/gookit/color v1.5.2 // indirect
 	github.com/ipfs/go-ipfs-api v0.2.0
 	github.com/jroimartin/gocui v0.5.0 // indirect
