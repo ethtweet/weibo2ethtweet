@@ -23,7 +23,7 @@ require (
 	github.com/nicksnyder/go-i18n/v2 v2.2.1 // indirect
 	github.com/parnurzeal/gorequest v0.2.16
 	github.com/rivo/uniseg v0.4.2 // indirect
-	github.com/shopspring/decimal v1.3.1
+	github.com/shopspring/decimal v1.4.0
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/spf13/cobra v1.6.1 // indirect
 	github.com/spf13/viper v1.14.0
